@@ -17,7 +17,7 @@ continue
 fi
 if [ -z "$(git log -1 --since='3 weeks ago' -s $k)" ]; then
 echo Deleting "$(git log -1 --pretty=format:"%ct" $k) $k";
-git push origin :${k#$prefix}
+# git push origin :${k#$prefix}
 fi
 done
 }
